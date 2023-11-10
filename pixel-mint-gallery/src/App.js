@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import Navbar from './Navbar/Navbar';
+import Gallery from './Gallery/Gallery';
 import './App.css';
 
 function App() {
+  const galleryItems = [
+    { id: 1, title: 'Image 1', imageSrc: 'path/to/your/image1.jpg' },
+    { id: 2, title: 'Image 2', imageSrc: 'path/to/your/image2.jpg' },
+    // ...more items
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Gallery items={galleryItems} />
     </div>
   );
 }
